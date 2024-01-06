@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page</title>
+    <title>Your Name - Portfolio</title>
 
     <style>
         body {
@@ -31,13 +31,46 @@
 
         .project {
             margin-bottom: 20px;
-            padding: 10px;
+            padding: 20px;
             border: 1px solid #ddd;
             background-color: #fff;
+            position: relative;
         }
 
         .project h3 {
             color: #333;
+        }
+
+        /* Unique Button Effect */
+        .project .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .project .button::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background-color: #2ecc71;
+            border-radius: 100%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            transition: width 0.3s, height 0.3s;
+        }
+
+        .project .button:hover::before {
+            width: 300px;
+            height: 300px;
         }
     </style>
 </head>
@@ -51,25 +84,30 @@
     <section id="projects">
         <h2>Projects</h2>
 
-        <!-- Sample Project -->
+        <!-- Project 1 -->
         <div class="project">
-            <h3>Sample Project</h3>
-            <p>This is a sample project description. It showcases how you can present your projects on your portfolio website.</p>
-            <p>GitHub Repository: <a href="https://github.com/yourusername/sample-project">Link</a></p>
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+            <p>GitHub Repository: <a href="https://github.com/yourusername/project1">Link</a></p>
+            <button class="button">Explore Project</button>
         </div>
 
-        <!-- Add more projects here -->
+        <!-- Project 2 -->
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+            <p>GitHub Repository: <a href="https://github.com/yourusername/project2">Link</a></p>
+            <button class="button">Explore Project</button>
+        </div>
 
-    </section>
+        <!-- Project 3 -->
+        <div class="project">
+            <h3>Project 3</h3>
+            <p>Description of Project 3.</p>
+            <p>GitHub Repository: <a href="https://github.com/yourusername/project3">Link</a></p>
+            <button class="button">Explore Project</button>
+        </div>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <!-- Add resume details here -->
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <!-- Add details about yourself here -->
     </section>
 </body>
 
