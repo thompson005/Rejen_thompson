@@ -27,6 +27,7 @@
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         .project {
@@ -35,6 +36,7 @@
             border: 1px solid #ddd;
             background-color: #fff;
             position: relative;
+            border-radius: 10px;
         }
 
         .project h3 {
@@ -45,52 +47,6 @@
             color: #666;
         }
 
-        .project .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .project .button::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background-color: #2ecc71;
-            border-radius: 100%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            transition: width 0.3s, height 0.3s;
-        }
-
-        .project .button:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .about-me {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .contact-me {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -99,13 +55,22 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
+        .about-me,
+        .contact-me {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Rejen Thompson</h1>
-        <p>| Cybersecurity Enthusiast</p>
+        <p>Cybersecurity Enthusiast</p>
     </header>
 
     <section id="projects">
@@ -117,7 +82,9 @@
             <p>
                 <strong>Project Title:</strong> Packet Analysis using Wireshark
             </p>
-            <!-- Other project details... -->
+            <p>
+                <strong>Description:</strong> Explore the world of network packet analysis using Wireshark. Learn how to capture live network traffic, understand different network protocols, perform security analysis, troubleshoot network issues, and master filtering and sorting of captured packets.
+            </p>
             <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/wireshark1">Link</a></p>
         </div>
 
@@ -127,7 +94,9 @@
             <p>
                 <strong>Project Title:</strong> Cipher Decoder
             </p>
-            <!-- Other project details... -->
+            <p>
+                <strong>Description:</strong> Delve into the fascinating world of cryptography and code-breaking. Develop a tool capable of decoding various ciphers and encrypted messages. Explore different cryptographic techniques, gain insights into historical and modern ciphers, and decipher encoded messages.
+            </p>
             <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/decoder">Link</a></p>
         </div>
 
@@ -137,12 +106,15 @@
             <p>
                 <strong>Project Title:</strong> Password Strength Checker
             </p>
-            <!-- Other project details... -->
+            <p>
+                <strong>Description:</strong> Enhance cybersecurity awareness and best practices by developing a robust tool for checking the strength and security of passwords. Delve into password hashing, complexity analysis, and implement algorithms to evaluate and improve password security in various applications.
+            </p>
             <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/pass_check">Link</a></p>
         </div>
 
     </section>
 
+    <!-- About Me section -->
     <section class="about-me">
         <h2>About Me</h2>
         <p>
@@ -153,6 +125,7 @@
         </p>
     </section>
 
+    <!-- Contact Me section -->
     <section class="contact-me">
         <h2>Contact Me</h2>
         <p>
