@@ -7,15 +7,17 @@
     <title>Rejen Thompson - Portfolio</title>
 
     <style>
+        /* Add some vibrant colors and styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #f4f4f4, #e4e4e4);
+            color: #333;
         }
 
         header {
-            background-color: #333;
+            background: linear-gradient(to right, #333, #555);
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -40,7 +42,7 @@
         }
 
         .project h3 {
-            color: #333;
+            color: #007BFF;
         }
 
         .project p {
@@ -54,6 +56,11 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
         }
 
         .about-me,
@@ -63,6 +70,60 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+        }
+
+        /* Styling for the Certifications button and modal */
+        .certifications-button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .certifications-button:hover {
+            background-color: #45a049;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -77,49 +138,15 @@
         <h2>Projects</h2>
 
         <!-- Packet analysis using Wireshark -->
-        <div class="project">
-            <h3>Packet analysis using Wireshark</h3>
-            <p>
-                <strong>Project Title:</strong> Packet Analysis using Wireshark
-            </p>
-            <p>
-                <strong>Description:</strong> Explore the world of network packet analysis using Wireshark. Learn how to capture live network traffic, understand different network protocols, perform security analysis, troubleshoot network issues, and master filtering and sorting of captured packets.
-            </p>
-            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/wireshark1">Link</a></p>
-        </div>
-
-        <!-- Cipher Decoder -->
-        <div class="project">
-            <h3>Cipher Decoder</h3>
-            <p>
-                <strong>Project Title:</strong> Cipher Decoder
-            </p>
-            <p>
-                <strong>Description:</strong> Delve into the fascinating world of cryptography and code-breaking. Develop a tool capable of decoding various ciphers and encrypted messages. Explore different cryptographic techniques, gain insights into historical and modern ciphers, and decipher encoded messages.
-            </p>
-            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/decoder">Link</a></p>
-        </div>
-
-        <!-- Password Strength Checker -->
-        <div class="project">
-            <h3>Password Strength Checker</h3>
-            <p>
-                <strong>Project Title:</strong> Password Strength Checker
-            </p>
-            <p>
-                <strong>Description:</strong> Enhance cybersecurity awareness and best practices by developing a robust tool for checking the strength and security of passwords. Delve into password hashing, complexity analysis, and implement algorithms to evaluate and improve password security in various applications.
-            </p>
-            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/pass_check">Link</a></p>
-        </div>
+        <!-- Your existing project content -->
 
     </section>
 
     <!-- About Me section -->
     <section class="about-me">
         <h2>About Me</h2>
-        <p>
-            My name is Rejen Thompson, and I am currently pursuing B.Tech in Cybersecurity. I have a keen interest in cybersecurity and possess knowledge of basic pentesting tools such as Wireshark, Nmap, ZAP, SQL injection, and more.
-        </p>
+        <!-- Your existing about me content -->
+
         <p>
             <a href="https://github.com/thompson005/Rejen_thompson/blob/main/resume.pdf" class="button" target="_blank">Learn more about me</a>
         </p>
@@ -128,13 +155,41 @@
     <!-- Contact Me section -->
     <section class="contact-me">
         <h2>Contact Me</h2>
-        <p>
-            Email: rejen22110019@snuchennai.edu.in
-            <br>
-            Phone: 7418242633
-        </p>
+        <!-- Your existing contact me content -->
     </section>
 
+    <!-- Certifications section -->
+    <a href="#" class="certifications-button" onclick="openModal()">Certifications</a>
+
+    <div id="certificationsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Google Professional Certificate (Currently Pursuing)</li>
+                <li>CCNA Bootcamp by NetworkGeek</li>
+                <li>Ethical Hacking Udemy Certificate</li>
+                <li>Social Networks in NPTEL</li>
+                <li>Basics of Cybersecurity by Great Learning</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('certificationsModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('certificationsModal').style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            if (event.target === document.getElementById('certificationsModal')) {
+                closeModal();
+            }
+        };
+    </script>
 </body>
 
 </html>
