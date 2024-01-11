@@ -7,12 +7,11 @@
     <title>Rejen Thompson - Portfolio</title>
 
     <style>
-        /* Add some vibrant colors and styles */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #f4f4f4, #e4e4e4);
+            background: linear-gradient(to right, #fceabb, #f8b500);
             color: #333;
         }
 
@@ -39,6 +38,11 @@
             background-color: #fff;
             position: relative;
             border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project:hover {
+            transform: scale(1.02);
         }
 
         .project h3 {
@@ -72,21 +76,19 @@
             margin-bottom: 20px;
         }
 
-        /* Styling for the Certifications button and modal */
         .certifications-button {
-            display: block;
-            margin: 20px auto;
-            padding: 15px 30px;
+            display: inline-block;
+            padding: 8px 16px;
             background-color: #4CAF50;
             color: #fff;
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: transform 0.2s ease-in-out;
         }
 
         .certifications-button:hover {
-            background-color: #45a049;
+            transform: scale(1.05);
         }
 
         .modal {
@@ -138,15 +140,48 @@
         <h2>Projects</h2>
 
         <!-- Packet analysis using Wireshark -->
-        <!-- Your existing project content -->
+        <div class="project">
+            <h3>Packet analysis using Wireshark</h3>
+            <p>
+                <strong>Project Title:</strong> Packet Analysis using Wireshark
+            </p>
+            <p>
+                <strong>Description:</strong> Explore the world of network packet analysis using Wireshark. Learn how to capture live network traffic, understand different network protocols, perform security analysis, troubleshoot network issues, and master filtering and sorting of captured packets.
+            </p>
+            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/wireshark1">Link</a></p>
+        </div>
 
+        <!-- Cipher Decoder -->
+        <div class="project">
+            <h3>Cipher Decoder</h3>
+            <p>
+                <strong>Project Title:</strong> Cipher Decoder
+            </p>
+            <p>
+                <strong>Description:</strong> Delve into the fascinating world of cryptography and code-breaking. Develop a tool capable of decoding various ciphers and encrypted messages. Explore different cryptographic techniques, gain insights into historical and modern ciphers, and decipher encoded messages.
+            </p>
+            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/decoder">Link</a></p>
+        </div>
+
+        <!-- Password Strength Checker -->
+        <div class="project">
+            <h3>Password Strength Checker</h3>
+            <p>
+                <strong>Project Title:</strong> Password Strength Checker
+            </p>
+            <p>
+                <strong>Description:</strong> Enhance cybersecurity awareness and best practices by developing a robust tool for checking the strength and security of passwords. Delve into password hashing, complexity analysis, and implement algorithms to evaluate and improve password security in various applications.
+            </p>
+            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/pass_check">Link</a></p>
+        </div>
     </section>
 
     <!-- About Me section -->
     <section class="about-me">
         <h2>About Me</h2>
-        <!-- Your existing about me content -->
-
+        <p>
+            My name is Rejen Thompson, and I am currently pursuing B.Tech in Cybersecurity. I have a keen interest in cybersecurity and possess knowledge of basic pentesting tools such as Wireshark, Nmap, ZAP, SQL injection, and more.
+        </p>
         <p>
             <a href="https://github.com/thompson005/Rejen_thompson/blob/main/resume.pdf" class="button" target="_blank">Learn more about me</a>
         </p>
@@ -155,12 +190,17 @@
     <!-- Contact Me section -->
     <section class="contact-me">
         <h2>Contact Me</h2>
-        <!-- Your existing contact me content -->
+        <p>
+            Email: rejen22110019@snuchennai.edu.in
+            <br>
+            Phone: 7418242633
+        </p>
     </section>
 
-    <!-- Certifications section -->
+    <!-- Certifications button -->
     <a href="#" class="certifications-button" onclick="openModal()">Certifications</a>
 
+    <!-- Certifications modal -->
     <div id="certificationsModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
