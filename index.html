@@ -28,17 +28,16 @@
             transform: translate(-50%, -50%);
             max-width: 800px;
             padding: 20px;
-            background-color: #1a1a1a;
+            background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            overflow-y: auto;
         }
 
         .project {
             margin-bottom: 20px;
             padding: 20px;
-            border: 1px solid #333;
-            background-color: #333;
+            border: 1px solid #ddd;
+            background-color: #fff;
             position: relative;
             border-radius: 10px;
             transition: transform 0.3s ease-in-out;
@@ -49,17 +48,17 @@
         }
 
         .project h3 {
-            color: #FFD700;
+            color: #333;
         }
 
         .project p {
-            color: #ddd;
+            color: #666;
         }
 
         .button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #FF5722;
+            background-color: #007BFF;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
@@ -67,12 +66,13 @@
         }
 
         .button:hover {
-            background-color: #E64A19;
+            background-color: #0056b3;
         }
 
         .about-me,
-        .contact-me {
-            background-color: #1a1a1a;
+        .contact-me,
+        .certifications {
+            background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -82,7 +82,7 @@
         .certifications-button {
             display: inline-block;
             padding: 8px 16px;
-            background-color: #FF5722;
+            background-color: #007BFF;
             color: #fff;
             text-align: center;
             text-decoration: none;
@@ -93,35 +93,6 @@
 
         .certifications-button:hover {
             transform: scale(1.05);
-        }
-
-        #commentForm {
-            margin-top: 20px;
-            color: #fff;
-        }
-
-        #commentForm label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        #commentForm textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-        }
-
-        #commentForm input[type="submit"] {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #commentForm input[type="submit"]:hover {
-            background-color: #45a049;
         }
     </style>
 </head>
@@ -144,7 +115,7 @@
             <p>
                 <strong>Description:</strong> Explore the world of network packet analysis using Wireshark. Learn how to capture live network traffic, understand different network protocols, perform security analysis, troubleshoot network issues, and master filtering and sorting of captured packets.
             </p>
-            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/wireshark1">Link</a></p>
+            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/wireshark1" class="button">Link</a></p>
         </div>
 
         <!-- Cipher Decoder -->
@@ -156,7 +127,7 @@
             <p>
                 <strong>Description:</strong> Delve into the fascinating world of cryptography and code-breaking. Develop a tool capable of decoding various ciphers and encrypted messages. Explore different cryptographic techniques, gain insights into historical and modern ciphers, and decipher encoded messages.
             </p>
-            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/decoder">Link</a></p>
+            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/decoder" class="button">Link</a></p>
         </div>
 
         <!-- Password Strength Checker -->
@@ -168,7 +139,7 @@
             <p>
                 <strong>Description:</strong> Enhance cybersecurity awareness and best practices by developing a robust tool for checking the strength and security of passwords. Delve into password hashing, complexity analysis, and implement algorithms to evaluate and improve password security in various applications.
             </p>
-            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/pass_check">Link</a></p>
+            <p>GitHub Repository: <a href="https://github.com/thompson005/Rejen_thompson/tree/main/pass_check" class="button">Link</a></p>
         </div>
 
         <!-- Add more projects as needed -->
@@ -186,6 +157,18 @@
         </p>
     </section>
 
+    <!-- Certifications section -->
+    <section class="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Google Professional Certificate (Currently Pursuing)</li>
+            <li>CCNA Bootcamp by NetworkGeek</li>
+            <li>Ethical Hacking Udemy Certificate</li>
+            <li>Social Networks in NPTEL</li>
+            <li>Basics of Cybersecurity by Great Learning</li>
+        </ul>
+    </section>
+
     <!-- Contact Me section -->
     <section class="contact-me">
         <h2>Contact Me</h2>
@@ -196,18 +179,9 @@
         </p>
     </section>
 
-    <!-- Certifications, Comments, and 3D Background -->
+    <!-- Certifications and 3D Background -->
     <div style="position: absolute; bottom: 20px; right: 20px; display: flex; align-items: center;">
         <a href="#" class="certifications-button" onclick="openModal()">Certifications</a>
-
-        <div style="margin-left: 10px;">
-            <h3 style="color: #fff;">Leave a Comment:</h3>
-            <form id="commentForm" onsubmit="submitComment(event)">
-                <label for="comment">Your Comment:</label>
-                <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
-                <input type="submit" value="Submit Comment">
-            </form>
-        </div>
     </div>
 
     <!-- Certifications modal -->
@@ -222,16 +196,6 @@
                 <li>Social Networks in NPTEL</li>
                 <li>Basics of Cybersecurity by Great Learning</li>
             </ul>
-        </div>
-    </div>
-
-    <!-- Comment modal -->
-    <div id="commentModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeCommentModal()">&times;</span>
-            <h2>Comments</h2>
-            <!-- Display comments here -->
-            <div id="comments"></div>
         </div>
     </div>
 
@@ -271,46 +235,11 @@
             document.getElementById('certificationsModal').style.display = 'none';
         }
 
-        function openCommentModal() {
-            document.getElementById('commentModal').style.display = 'block';
-        }
-
-        function closeCommentModal() {
-            document.getElementById('commentModal').style.display = 'none';
-        }
-
         window.onclick = function (event) {
             if (event.target === document.getElementById('certificationsModal')) {
                 closeModal();
             }
-            if (event.target === document.getElementById('commentModal')) {
-                closeCommentModal();
-            }
         };
-
-        function submitComment(event) {
-            event.preventDefault();
-
-            var commentText = document.getElementById('comment').value;
-
-            // Validate if the comment is not empty
-            if (!commentText.trim()) {
-                alert('Please enter a comment.');
-                return;
-            }
-
-            // Add the comment to the comments div
-            var commentsDiv = document.getElementById('comments');
-            var commentElement = document.createElement('p');
-            commentElement.textContent = commentText;
-            commentsDiv.appendChild(commentElement);
-
-            // Clear the comment textarea
-            document.getElementById('comment').value = '';
-
-            // Close the comment modal
-            closeCommentModal();
-        }
     </script>
 
 </body>
