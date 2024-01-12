@@ -11,22 +11,19 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            background-color: #f4f4f4;
         }
 
         header {
-            background: linear-gradient(to right, #4CAF50, #8BC34A);
+            background-color: #333;
             color: #fff;
             text-align: center;
             padding: 20px;
         }
 
         section {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -40,11 +37,6 @@
             background-color: #fff;
             position: relative;
             border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .project:hover {
-            transform: scale(1.02);
         }
 
         .project h3 {
@@ -62,11 +54,6 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
         }
 
         .about-me,
@@ -87,12 +74,7 @@
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
-            transition: transform 0.2s ease-in-out;
             margin-right: 10px;
-        }
-
-        .certifications-button:hover {
-            transform: scale(1.05);
         }
     </style>
 </head>
@@ -179,67 +161,16 @@
         </p>
     </section>
 
-    <!-- Certifications and 3D Background -->
-    <div style="position: absolute; bottom: 20px; right: 20px; display: flex; align-items: center;">
-        <a href="#" class="certifications-button" onclick="openModal()">Certifications</a>
+    <!-- Certifications button -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <a href="#" class="certifications-button" onclick="showCertifications()">Certifications</a>
     </div>
 
-    <!-- Certifications modal -->
-    <div id="certificationsModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Certifications</h2>
-            <ul>
-                <li>Google Professional Certificate (Currently Pursuing)</li>
-                <li>CCNA Bootcamp by NetworkGeek</li>
-                <li>Ethical Hacking Udemy Certificate</li>
-                <li>Social Networks in NPTEL</li>
-                <li>Basics of Cybersecurity by Great Learning</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- JavaScript for modal and Three.js -->
-    <script src="https://threejs.org/build/three.js"></script>
+    <!-- JavaScript for certifications modal -->
     <script>
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        var geometry = new THREE.PlaneGeometry(2, 2);
-        var material = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load('graffiti_texture.jpg') });
-        var plane = new THREE.Mesh(geometry, material);
-        scene.add(plane);
-
-        camera.position.z = 5;
-
-        var animate = function () {
-            requestAnimationFrame(animate);
-
-            plane.rotation.x += 0.001;
-            plane.rotation.y += 0.001;
-
-            renderer.render(scene, camera);
-        };
-
-        animate();
-
-        function openModal() {
-            document.getElementById('certificationsModal').style.display = 'block';
+        function showCertifications() {
+            alert("Google Professional Certificate (Currently Pursuing)\nCCNA Bootcamp by NetworkGeek\nEthical Hacking Udemy Certificate\nSocial Networks in NPTEL\nBasics of Cybersecurity by Great Learning");
         }
-
-        function closeModal() {
-            document.getElementById('certificationsModal').style.display = 'none';
-        }
-
-        window.onclick = function (event) {
-            if (event.target === document.getElementById('certificationsModal')) {
-                closeModal();
-            }
-        };
     </script>
 
 </body>
